@@ -201,8 +201,8 @@ export default function Home({images}) {
 
 			{modalImage != null ? (
 				<div class="fixed w-screen h-screen z-40 overflow-scroll bg-smoke-darker flex" onClick={() => setModalImage(null)}>
-					<div class="p-2 md:w-2/3 w-full m-auto flex-col flex rounded z-50 items-center" onClick={(event) => event.stopPropagation()} >
-						<div className="relative">
+					<div class="p-2 md:w-2/3 w-full m-auto flex-col flex rounded z-50 items-center"  >
+						<div className="relative" onClick={(event) => event.stopPropagation()}>
 							<button className="absolute top-0 right-0 mr-2 md:-mr-8 text-3xl -mt-10 text-white" onClick={() => setModalImage(null)}><i className="fa fa-close"/></button>
 							<a href={modalImage.photographer_url} target="_blank" className="absolute bottom-0 left-0 ml-2 -mb-8 text-gray-200">{modalImage.photographer}</a>
 							<img className="rounded" src={modalImage.src.large2x} style={{maxHeight: '80vh'}} />
