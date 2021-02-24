@@ -1,0 +1,47 @@
+/* ./styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS Code Here */
+@import 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
+
+.app-container {
+  @apply flex flex-wrap flex-row h-screen overflow-y-hidden bg-gray-100;
+}
+
+body {
+  @apply flex flex-wrap flex-row h-screen overflow-y-hidden bg-gray-100;
+}
+
+.content {
+  @apply overflow-y-scroll h-full ;
+}
+
+@media (min-width: 500px) {
+    .navbar {
+        width: 15VW;
+        height: 100vh;
+    }   
+    .content {
+        width: 85VW;
+    }  
+}
+@media (max-width: 499px) {
+    .navbar {
+        width: 100VW;
+        height: auto;
+    }   
+    .content {
+        width: 100VW;
+    }   
+}
+
+
+.zoom {
+  transition: transform .2s; /* Animation */
+}
+
+.zoom:hover {
+  transform: scale(1.1);
+}
