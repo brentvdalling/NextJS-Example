@@ -119,7 +119,7 @@ export default function Home({images}) {
 			<div className="content">
 				<div className="w-full md:w-2/3 mx-auto flex flex-row flex-wrap content-center px-5 mb-20 my-3 md:my-10">
 					
-					<form className="w-full m-2 p-0 relative flex flex-row flex-wrap" onSubmit={handleFormSubmit}>
+					<form className="w-full m-2 p-0 relative flex flex-row flex-wrap" onSubmit={handleFormSubmit} id="filter">
 						<div className="w-full">
 							<input type="text" className="w-full p-3 bg-white rounded border text-gray-700" id="filter[query]" placeholder="Search Pexels"/>
 							<button type="submit" className="absolute right-0 mr-5 text-lg p-3 text-gray-500 hover:text-gray-700 cursor-pointer">Search</button>
@@ -130,7 +130,7 @@ export default function Home({images}) {
 						</div>
 
 						<div className="w-1/2 md:w-auto my-1 md:my-0 md:mr-3 p-1">
-							<select className="w-full p-1 bg-white rounded text-gray-400" id="filter[color]" defaultValue="">
+							<select className="w-full p-1 bg-white rounded text-gray-400" id="filter[color]" defaultValue="" onChange={handleFormSubmit}>
 								<option>Any Color</option>
 								<option value="red">Red</option>
 								<option value="orange">Orange</option>
@@ -147,7 +147,7 @@ export default function Home({images}) {
 						</div>
 
 						<div className="w-1/2 md:w-auto my-1 md:my-0 md:mx-3 p-1">
-							<select className="w-full p-1 bg-white rounded text-gray-400" id="filter[size]" defaultValue="large">
+							<select className="w-full p-1 bg-white rounded text-gray-400" id="filter[size]" defaultValue="large" onChange={handleFormSubmit}>
 								<option>Any Size</option>
 								<option value="large">Large (24MP)</option>
 								<option value="medium">Medium (12MP)</option>
@@ -156,7 +156,7 @@ export default function Home({images}) {
 						</div>
 
 						<div className="w-1/2 md:w-auto my-1 md:my-0 md:mx-3 p-1">
-							<select className="w-full p-1 bg-white rounded text-gray-400" id="filter[results]" defaultValue="15">
+							<select className="w-full p-1 bg-white rounded text-gray-400" id="filter[results]" defaultValue="15" onChange={handleFormSubmit}>
 								<option value="15">15 Results</option>
 								<option value="30">30 Results</option>
 								<option value="50">50 Results</option>
@@ -165,7 +165,7 @@ export default function Home({images}) {
 						</div>
 
 						<div className="w-1/2 md:w-auto my-1 md:my-0 md:mx-3 p-1">
-							<select className="w-full p-1 bg-white rounded text-gray-400" id="filter[orientation]" defaultValue="landscape">
+							<select className="w-full p-1 bg-white rounded text-gray-400" id="filter[orientation]" defaultValue="landscape" onChange={handleFormSubmit}> 
 								<option>Any Orientation</option>
 								<option value="landscape">Landscape</option>
 								<option value="portrait">Portrait</option>
